@@ -1,0 +1,91 @@
+.columns-blocks{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.columns-blocks > div{
+  margin-top: 25px;
+  height: 520px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.block-2{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 2%;
+}
+
+/*animación sacada y modificada de https://codepen.io/gayane-gasparyan/pen/jOmaBQK*/
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.block-2 {
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.block-2 {
+  color: rgb(144, 17, 148);
+  transition: color 1s;
+}
+
+
+
+.block-2::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #ff5d9323, #e33ccd 43%,#4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.block-2::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
