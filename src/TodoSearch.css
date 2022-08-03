@@ -1,12 +1,13 @@
 .input-buscar{
-    width: 80%;
-    margin: 0% 6%;
+    width: 85%;
+    margin: 0% 4%;
     padding: 10px 10px;
-    border-radius: 3%;
-    border: 1px solid #000;
+    border-radius: 5px;
+    border: 1px solid rgb(248, 54, 184);
     align-items: center;
     outline:salmon;
+    opacity: .7;
 }
 .input-buscar:focus {
-    border: 2px solid rgb(245, 150, 150);
+    border: 2px solid rgb(245, 150, 171);
 }

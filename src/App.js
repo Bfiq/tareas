@@ -10,7 +10,7 @@ import {TodoHome} from './TodoHome';
 const todos = [
   {id: 1, text: "hacer prueba de desarrollo 1", completed: false},
   {id: 2, text: "hacer prueba de desarrollo 2", completed: false},
-  {id: 3, text: "hacer prueba de desarrollo 3", completed: false}
+  {id: 3, text: "hacer prueba de desarrollo 3 estratocopuslusnicopus xd, mucho texto en este ejemplo", completed: false}
 ];
 
 function App() {

@@ -1,9 +1,10 @@
 import React from "react";
+import './CreateTodoButton.css';
 
 function CreateTodoButton() {
     return(
         <React.Fragment>
-            <button>+</button>
+            <button className="btn-create">Agregar Tarea</button>
         </React.Fragment>
     );
 }

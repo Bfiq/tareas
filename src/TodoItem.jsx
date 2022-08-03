@@ -3,10 +3,16 @@ import './TodoItem.css'
 
 function TodoItem(props) {
     return(
-        <li className="Item">
-            <span className="checkmark">C</span>
-            <p>{props.text}</p>
-            <span>X</span>
+        <li className="TodoItem">
+            <span className="container">
+                <input type="checkbox" />
+            </span>
+            <p className="">
+            {props.text}
+            </p>
+            <span className="btn-x">
+            X
+            </span>
         </li>
     );
 }
